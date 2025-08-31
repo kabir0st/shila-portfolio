@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  chef-folio-flow:
+    build: .
+    ports:
+      - "8071:8071"
+    container_name: chef-folio-flow
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
