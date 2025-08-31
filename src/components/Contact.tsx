@@ -10,11 +10,11 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 section-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Let's Create Together
+            Let's Connect
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to elevate your dining experience? Whether you're planning a special event,
-            looking for culinary consultation, or interested in collaboration, I'd love to hear from you.
+            Interested in Japanese cuisine, sushi preparation, or coffee services? Whether you're looking 
+            for culinary consultation, event catering, or collaboration opportunities, I'd love to hear from you.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary">Phone</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+46 070 014 1719</p>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary">Email</p>
-                  <p className="text-muted-foreground">marcus@chefmarcus.com</p>
+                  <p className="text-muted-foreground">sheelabhujel26@gmail.com</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary">Location</p>
-                  <p className="text-muted-foreground">New York, NY</p>
+                  <p className="text-muted-foreground">Gothenburg, Sweden</p>
                 </div>
               </div>
             </div>
@@ -124,10 +124,10 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Event Type
+                    Service Type
                   </label>
                   <Input 
-                    placeholder="Private Dinner, Catering, Consultation"
+                    placeholder="Sushi Catering, Coffee Service, Culinary Consultation"
                     className="focus:ring-primary focus:border-primary"
                   />
                 </div>
@@ -137,7 +137,7 @@ const Contact = () => {
                     Message
                   </label>
                   <Textarea 
-                    placeholder="Tell me about your vision and how I can help bring it to life..."
+                    placeholder="Tell me about your event or project and how I can help create an exceptional culinary experience..."
                     rows={5}
                     className="focus:ring-primary focus:border-primary"
                   />

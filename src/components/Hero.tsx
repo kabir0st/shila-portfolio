@@ -13,17 +13,17 @@ const Hero = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 hero-text">
-            Chef Marcus
+            Shila Bhujel
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-primary mb-8 font-light">
-            Culinary Artist & Executive Chef
+            Culinary Specialist & Business Professional
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Creating extraordinary dining experiences through innovative cuisine, 
-            passion for excellence, and a commitment to culinary artistry that 
-            delights every sense.
+            Specializing in Japanese cuisine and sushi preparation with expertise in coffee arts. 
+            Combining culinary passion with business acumen to create exceptional dining experiences 
+            and professional service excellence.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -48,7 +48,7 @@ const Hero = () => {
               <div className="flex justify-center mb-3">
                 <Award className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">15+</div>
+              <div className="text-3xl font-bold text-primary mb-2">5+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             
@@ -56,16 +56,16 @@ const Hero = () => {
               <div className="flex justify-center mb-3">
                 <Users className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">50K+</div>
-              <div className="text-muted-foreground">Happy Customers</div>
+              <div className="text-3xl font-bold text-primary mb-2">4</div>
+              <div className="text-muted-foreground">Languages Spoken</div>
             </div>
             
             <div className="text-center">
               <div className="flex justify-center mb-3">
                 <ChefHat className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">200+</div>
-              <div className="text-muted-foreground">Signature Dishes</div>
+              <div className="text-3xl font-bold text-primary mb-2">3</div>
+              <div className="text-muted-foreground">Specializations</div>
             </div>
           </div>
         </div>

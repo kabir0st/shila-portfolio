@@ -1,55 +1,70 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Award, Utensils } from "lucide-react";
+import { MapPin, Calendar, Award, Utensils, Languages } from "lucide-react";
 
 const About = () => {
   const experiences = [
     {
-      title: "Executive Chef",
-      restaurant: "Le Petit Gourmet",
-      location: "New York, NY",
-      period: "2020 - Present",
+      title: "Assistant Kitchen Manager",
+      restaurant: "Kantipur Hotel Training Center",
+      location: "Pokhara, Nepal",
+      period: "May 2025 - Aug 2025",
       achievements: [
-        "Michelin Star recipient 2022 & 2023",
-        "Increased revenue by 40% through menu innovation",
-        "Led team of 25+ culinary professionals"
+        "Completed internship in Special Sushi preparation",
+        "Gained hands-on experience in sushi making and kitchen coordination",
+        "Maintained food hygiene and safety standards",
+        "Assisted in managing daily kitchen operations to support team efficiency",
+        "Ensured high-quality food presentation and customer satisfaction"
       ]
     },
     {
-      title: "Sous Chef",
-      restaurant: "The Golden Spoon",
-      location: "San Francisco, CA", 
-      period: "2018 - 2020",
+      title: "Financial Accountant",
+      restaurant: "Siddhartha Lovedale Boarding School",
+      location: "Pokhara, Nepal", 
+      period: "Apr 2020 - Apr 2023",
       achievements: [
-        "James Beard Award nominee",
-        "Developed signature tasting menu",
-        "Mentored junior chefs and line cooks"
+        "Managed financial operations, including daily transactions and billing",
+        "Oversaw expense tracking and audit preparation",
+        "Digitized financial documents in both Nepali and English",
+        "Maintained accurate financial records for compliance",
+        "Supported client relations and customer service operations"
       ]
     },
     {
-      title: "Chef de Partie",
-      restaurant: "Château Restaurant",
-      location: "Paris, France",
-      period: "2016 - 2018",
+      title: "Store Manager",
+      restaurant: "Friends Gifts Shop and Fancy Store",
+      location: "Pokhara, Nepal",
+      period: "Aug 2018 - Mar 2020",
       achievements: [
-        "Specialized in French classical cuisine",
-        "Worked under Michelin 3-star chef",
-        "Mastered advanced culinary techniques"
+        "Managed front-desk operations and financial activities",
+        "Handled day-to-day business transactions and ledger entries",
+        "Supported cash flow management and financial operations",
+        "Provided exceptional customer service at reception",
+        "Coordinated with accounting team to streamline operations"
       ]
     }
   ];
 
   const skills = [
-    "French Cuisine", "Molecular Gastronomy", "Farm-to-Table", "Wine Pairing",
-    "Menu Development", "Kitchen Management", "Food Safety", "Pastry Arts",
-    "Sustainable Cooking", "International Cuisine", "Food Photography", "Recipe Development"
+    "Japanese Cuisine", "Sushi Preparation", "Coffee Brewing", "Latte Art", 
+    "Espresso Preparation", "Oven Pizza Making", "Health & Safety Practices",
+    "Team Management", "Microsoft Office", "Accounting", "Social Media",
+    "Organizational Planning", "Customer Service", "Financial Management"
   ];
 
   const certifications = [
-    "Culinary Institute of America Graduate",
-    "ServSafe Certified Manager",
-    "Sommelier Level 2 Certification",
-    "Sustainable Cuisine Specialist"
+    "Master's in Business Studies - Tribhuvan University (2023-2025)",
+    "Bachelor of Business Studies - Tribhuvan University (2016-2020)",
+    "Sushi Specialistic Training - Kantipur Hotel Training Center",
+    "Certificate of Barista Training Completion - Coffee Demy",
+    "Accounting Package Tally and Computing - Quality Multi Training Centre"
+  ];
+
+  const languages = [
+    { language: "Nepali", level: "Native" },
+    { language: "Hindi", level: "C2 Proficient" },
+    { language: "English", level: "B2 Independent" },
+    { language: "Swedish", level: "A2 Basic" }
   ];
 
   return (
@@ -57,12 +72,14 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 section-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            About Chef Marcus
+            About Shila Bhujel
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            With over 15 years of culinary excellence, I've dedicated my career to pushing 
-            the boundaries of flavor, presentation, and dining experience. My journey has 
-            taken me from classical French kitchens to innovative molecular gastronomy labs.
+            A passionate culinary professional with expertise in Japanese cuisine and sushi preparation, 
+            combined with strong business acumen. My journey spans from specialized culinary training in 
+            Nepal to developing skills in barista arts, while maintaining excellence in financial management 
+            and team leadership. Currently based in Gothenburg, Sweden, I bring a unique blend of Eastern 
+            culinary traditions with modern business practices.
           </p>
         </div>
 
@@ -129,6 +146,26 @@ const About = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-primary mb-10 text-center flex items-center justify-center">
+            <Languages className="w-8 h-8 mr-3 text-accent" />
+            Languages
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {languages.map((lang, index) => (
+              <Card key={index} className="text-center hover:shadow-warm transition-all duration-300 bg-gradient-warm">
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-bold text-primary mb-2">{lang.language}</h4>
+                  <Badge variant="outline" className="text-accent border-accent">
+                    {lang.level}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
