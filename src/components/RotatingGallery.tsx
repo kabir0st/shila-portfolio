@@ -52,29 +52,29 @@ const Gallery = () => {
   const [bentoHoveredIndex, setBentoHoveredIndex] = useState<number | null>(null);
   const [activeSection, setActiveSection] = useState<string>("culinary");
 
-  // Sushi Rolls Collection
+  // Sushi Rolls Collection - Optimized sizes for better grid filling
   const sushiRolls = [
     { src: dragonRoll, name: "Dragon Roll", description: "A masterpiece roll featuring fresh eel, avocado, and cucumber, topped with thinly sliced avocado resembling dragon scales, drizzled with unagi sauce", category: "Specialty Roll", size: "large" },
-    { src: rainbowRoll, name: "Rainbow Roll", description: "Vibrant California roll topped with an array of colorful sashimi including tuna, salmon, yellowtail, and avocado creating a rainbow effect", category: "Specialty Roll", size: "medium" },
+    { src: rainbowRoll, name: "Rainbow Roll", description: "Vibrant California roll topped with an array of colorful sashimi including tuna, salmon, yellowtail, and avocado creating a rainbow effect", category: "Specialty Roll", size: "large" },
     { src: philadelphiaRoll, name: "Philadelphia Roll", description: "Classic American-style roll with fresh salmon, cream cheese, and cucumber, delivering a perfect balance of rich and refreshing flavors", category: "Classic Roll", size: "medium" },
-    { src: californiaRoll, name: "California Roll", description: "The iconic inside-out roll with imitation crab, avocado, and cucumber, rolled in sesame seeds - a perfect introduction to sushi", category: "Classic Roll", size: "small" },
-    { src: spicyMayuroRoll, name: "Spicy Mayuro Roll", description: "Bold and flavorful roll featuring spicy tuna or salmon with a special mayo-based sauce, topped with masago and scallions for extra heat", category: "Spicy Roll", size: "small" },
-    { src: tunaAvocadoRoll, name: "Tuna Avocado Roll", description: "Simple yet elegant combination of fresh tuna sashimi and creamy avocado, showcasing the pure flavors of premium ingredients", category: "Classic Roll", size: "small" },
+    { src: californiaRoll, name: "California Roll", description: "The iconic inside-out roll with imitation crab, avocado, and cucumber, rolled in sesame seeds - a perfect introduction to sushi", category: "Classic Roll", size: "medium" },
+    { src: spicyMayuroRoll, name: "Spicy Mayuro Roll", description: "Bold and flavorful roll featuring spicy tuna or salmon with a special mayo-based sauce, topped with masago and scallions for extra heat", category: "Spicy Roll", size: "medium" },
+    { src: tunaAvocadoRoll, name: "Tuna Avocado Roll", description: "Simple yet elegant combination of fresh tuna sashimi and creamy avocado, showcasing the pure flavors of premium ingredients", category: "Classic Roll", size: "medium" },
     { src: sakeRoll, name: "Sake Roll", description: "Traditional salmon roll highlighting the rich, buttery flavor of Norwegian salmon with a touch of cucumber for freshness", category: "Classic Roll", size: "small" },
     { src: tekkaMakiRoll, name: "Tekka Maki Roll", description: "Traditional tuna roll - the purest expression of sushi craftsmanship with premium bluefin tuna and perfectly seasoned sushi rice", category: "Traditional", size: "small" },
     { src: yasaiRoll, name: "Yasai Roll", description: "Vegetarian delight featuring fresh seasonal vegetables including cucumber, avocado, and pickled radish, perfect for plant-based diners", category: "Vegetarian", size: "medium" },
-    { src: fryTempuraRoll, name: "Tempura Roll", description: "Crispy tempura shrimp roll with avocado and cucumber, topped with tempura flakes and drizzled with spicy mayo and eel sauce", category: "Fried Roll", size: "medium" },
+    { src: fryTempuraRoll, name: "Tempura Roll", description: "Crispy tempura shrimp roll with avocado and cucumber, topped with tempura flakes and drizzled with spicy mayo and eel sauce", category: "Fried Roll", size: "large" },
     { src: futomakiRoll, name: "Futomaki Roll", description: "Large traditional roll packed with multiple ingredients including tamago, cucumber, pickled radish, and shiitake mushrooms", category: "Traditional", size: "medium" },
     { src: friedRoll, name: "Fried Specialty Roll", description: "Innovative deep-fried roll with a crispy exterior and warm, flavorful filling, served with special dipping sauces", category: "Fried Roll", size: "small" }
   ];
 
-  // Traditional Japanese Dishes
+  // Traditional Japanese Dishes - Optimized sizes for better grid filling
   const traditionalDishes = [
     { src: sushi, name: "Premium Sushi Selection", description: "Exquisite assortment of nigiri and sashimi featuring the day's finest fish, expertly crafted with traditional techniques passed down through generations", category: "Sushi", size: "large" },
-    { src: nigiri, name: "Nigiri Sushi", description: "Hand-pressed sushi rice topped with premium fish, showcasing the perfect balance of rice temperature, fish quality, and chef's technique", category: "Sushi", size: "small" },
-    { src: temaki, name: "Temaki Hand Rolls", description: "Cone-shaped hand rolls filled with fresh ingredients, wrapped in crispy nori seaweed - the perfect handheld sushi experience", category: "Sushi", size: "small" },
+    { src: nigiri, name: "Nigiri Sushi", description: "Hand-pressed sushi rice topped with premium fish, showcasing the perfect balance of rice temperature, fish quality, and chef's technique", category: "Sushi", size: "medium" },
+    { src: temaki, name: "Temaki Hand Rolls", description: "Cone-shaped hand rolls filled with fresh ingredients, wrapped in crispy nori seaweed - the perfect handheld sushi experience", category: "Sushi", size: "medium" },
     { src: temari, name: "Temari Sushi", description: "Beautiful ball-shaped sushi wrapped in colorful ingredients, inspired by traditional Japanese temari balls - as beautiful as it is delicious", category: "Sushi", size: "small" },
-    { src: ramen, name: "Authentic Ramen", description: "Rich, complex broth simmered for hours with hand-pulled noodles, tender chashu pork, soft-boiled egg, and traditional toppings", category: "Noodles", size: "medium" },
+    { src: ramen, name: "Authentic Ramen", description: "Rich, complex broth simmered for hours with hand-pulled noodles, tender chashu pork, soft-boiled egg, and traditional toppings", category: "Noodles", size: "large" },
     { src: misoSoup, name: "Traditional Miso Soup", description: "Comforting soup made with fermented soybean paste, wakame seaweed, and silky tofu - the soul of Japanese cuisine", category: "Soup", size: "small" },
     { src: gyoza, name: "Pan-Fried Gyoza", description: "Perfectly crispy bottom, tender steamed top dumplings filled with seasoned pork and vegetables, served with tangy dipping sauce", category: "Appetizer", size: "medium" }
   ];
@@ -146,16 +146,16 @@ const Gallery = () => {
     document.body.style.overflow = 'unset';
   };
 
-  // Bento grid size classes with better aspect ratio handling
+  // Optimized bento grid size classes to eliminate wasted space
   const getBentoSizeClass = (size: string) => {
     switch (size) {
       case 'large':
-        return 'col-span-2 row-span-2 min-h-[300px] md:min-h-[400px]';
+        return 'col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-3 row-span-2 md:row-span-2 lg:row-span-2 min-h-[280px] md:min-h-[320px] lg:min-h-[360px]';
       case 'medium':
-        return 'col-span-2 row-span-1 min-h-[200px] md:min-h-[250px]';
+        return 'col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-2 row-span-1 md:row-span-1 lg:row-span-2 min-h-[200px] md:min-h-[240px] lg:min-h-[280px]';
       case 'small':
       default:
-        return 'col-span-1 row-span-1 min-h-[150px] md:min-h-[200px]';
+        return 'col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 row-span-1 md:row-span-1 lg:row-span-1 min-h-[200px] md:min-h-[240px] lg:min-h-[280px]';
     }
   };
 
@@ -172,8 +172,8 @@ const Gallery = () => {
             My Culinary Journey
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Experience the artistry of my culinary expertise through signature creations, professional achievements, and personal moments. 
-            Each image tells a story of passion, dedication, and culinary excellence.
+            Experience the artistry of my culinary expertise through my dedication, professional achievements, and personal moments. 
+            As a chef with a Master's degree in Accounting and Management, I bring both culinary excellence and business leadership to the kitchen.
           </p>
         </div>
 
@@ -208,7 +208,8 @@ const Gallery = () => {
               <h3 className="text-2xl font-semibold text-primary mb-4">Culinary Creations</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 From traditional Japanese sushi rolls to innovative fusion dishes, explore my diverse culinary repertoire 
-                featuring premium ingredients and meticulous preparation techniques.
+                featuring premium ingredients and meticulous preparation techniques. Beyond cooking, my management expertise 
+                ensures efficient kitchen operations and cost-effective food service delivery.
               </p>
             </div>
           )}
@@ -216,8 +217,9 @@ const Gallery = () => {
             <div className="animate-in fade-in duration-500">
               <h3 className="text-2xl font-semibold text-primary mb-4">Professional Achievements</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                My commitment to excellence is reflected in these professional certifications and training achievements 
-                that showcase my dedication to culinary mastery and continuous learning.
+                My commitment to excellence spans both culinary arts and business management. These professional certifications 
+                showcase my culinary expertise, while my Master's degree in Accounting and Management demonstrates my ability 
+                to lead teams, manage finances, and optimize restaurant operations.
               </p>
             </div>
           )}
@@ -226,20 +228,21 @@ const Gallery = () => {
               <h3 className="text-2xl font-semibold text-primary mb-4">Behind the Scenes</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Glimpses into my personal culinary journey, capturing moments of growth, celebration, 
-                and the passion that drives my commitment to the culinary arts.
+                and the passion that drives my commitment to the culinary arts. As someone who understands 
+                both the creative and business sides of the industry, I'm equipped to excel in any kitchen environment.
               </p>
             </div>
           )}
         </div>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 max-w-7xl mx-auto">
+        {/* Optimized Bento Grid - No Wasted Space */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4 lg:gap-4 max-w-7xl mx-auto auto-rows-min">
           {galleryImages.map((item, index) => (
             <div
               key={index}
-              className={`relative group cursor-pointer ${getBentoSizeClass(item.size)} overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 hover:z-10`}
+              className={`relative group cursor-pointer ${getBentoSizeClass(item.size)} overflow-hidden rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:z-10 hover:shadow-2xl hover:shadow-primary/20`}
               style={{
-                animationDelay: `${index * 100}ms`,
+                animationDelay: `${index * 80}ms`,
               }}
               onMouseEnter={() => setBentoHoveredIndex(index)}
               onMouseLeave={() => setBentoHoveredIndex(null)}
@@ -290,22 +293,22 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Stats */}
-        <div className="flex justify-center mt-16 space-x-8">
+        <div className="flex justify-center mt-16 space-x-6 md:space-x-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-2">{allCollections.culinary.length}</div>
             <div className="text-sm text-muted-foreground">Culinary Creations</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">{allCollections.certificates.length}</div>
-            <div className="text-sm text-muted-foreground">Certifications</div>
+            <div className="text-3xl font-bold text-primary mb-2">{allCollections.certificates.length}+</div>
+            <div className="text-sm text-muted-foreground">Culinary Certifications</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
+            <div className="text-3xl font-bold text-primary mb-2">2+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">{Object.values(allCollections).flat().length}</div>
-            <div className="text-sm text-muted-foreground">Total Gallery Items</div>
+            <div className="text-3xl font-bold text-primary mb-2">Master's</div>
+            <div className="text-sm text-muted-foreground">Business Management</div>
           </div>
         </div>
       </div>
