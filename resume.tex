@@ -1,0 +1,151 @@
+\documentclass[10pt,a4paper]{article}
+
+% --- Encoding & fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\usepackage[sfdefault]{roboto}
+\renewcommand*\familydefault{\sfdefault}
+
+% --- Layout & graphics ---
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{paracol}
+\setlength{\columnsep}{0.5cm}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{2pt}
+
+% --- Colors ---
+\definecolor{accent}{HTML}{1F4B99}
+\definecolor{textgray}{HTML}{222222}
+\color{textgray}
+
+% --- Headings ---
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}\textbf{\large\color{accent}#1}\vspace{4pt}\par
+}
+
+% --- Subheading workplace/education ---
+\newcommand{\cvitem}[4]{%
+  {\textbf{#1}} \hfill {\small #3}\par
+  {\textit{#2}}, {\small #4}\vspace{10pt}
+}
+
+% --- Horizontal line ---
+\newcommand{\sepline}{\vspace{6pt}\hrule height 0.5pt \vspace{6pt}}
+
+\begin{document}
+
+% HEADER
+\noindent
+\begin{minipage}{0.7\textwidth}
+  {\Huge\bfseries\color{accent} Shila Bhujel}\par
+  \vspace{6pt}
+  {\small\color{accent}
+    \faPhone\; +46 700417119 \;|\;
+    \faEnvelope\; sheelabhujel26@gmail.com \;|\;
+    \faAddressCard\; shila.kabir0st.info
+  }
+\end{minipage}%
+\hfill
+\begin{minipage}{0.25\textwidth}
+  % Optionally include photo if available
+  %\raggedleft
+  %\begin{tikzpicture}
+  %  \clip (0,0) circle (1.4cm);
+  %  \node at (0,0) {\includegraphics[width=2.8cm]{IMG_2417.jpg}};
+  %\end{tikzpicture}
+\end{minipage}
+
+\sepline
+
+% PROFILE
+{\small
+Motivated and detail-oriented professional with a strong background in business management, accounting, and hospitality. Skilled in food preparation, barista services, and sushi specialization, with proven ability to maintain high standards of quality and efficiency. Adaptable, hardworking, and eager to contribute skills in both business and hospitality sectors.
+}
+
+\sepline
+
+\begin{paracol}{2}
+
+% LEFT COLUMN
+\cvsection{Work Experience}
+
+\cvitem{Tre Indier, Gothenburg, Sweden}
+  {Waiter/Waitress}
+  {Sep 2025 -- Current}
+  {Provided prompt, friendly service by taking and serving orders accurately. Assisted guests with menu selections and addressed special requests professionally. Maintained cleanliness and organization of dining areas while supporting team efficiency. Handled transactions and resolved customer concerns to ensure satisfaction.}
+
+\cvitem{Kantipur Hotel Training Center}
+  {Assistant Kitchen Manager (Intern: Sushi Specialization)}
+  {May 2025 -- Aug 2025}
+  {Completed internship in special sushi preparation. Gained hands-on experience in sushi making and kitchen coordination. Maintained food hygiene and safety standards. Assisted in managing daily kitchen operations and food presentation.}
+
+\cvitem{Siddhartha Lovedale School}
+  {Financial Accountant}
+  {Apr 2020 -- Apr 2023}
+  {Managed the school's financial operations, including daily transactions, expense tracking, billing, and ledger posting. Handled audit preparations and digitized financial documents in Nepali and English. Supported client relations and ensured smooth financial operations.}
+
+\cvitem{Friends Gifts Shop and Fancy Store}
+  {Store Manager}
+  {Aug 2018 -- Mar 2020}
+  {Managed front-desk operations and financial activities. Handled transactions, maintained ledgers, supported cash flow management, and ensured accountability and smooth business operations.}
+
+\cvsection{Certifications \& Training}
+{\small
+Sushi Specialistic Training (Kantipur Hotel Training Center, 2025)\\
+Certificate of Barista Training Completion (Coffee Demy Barista Training)\\
+Accounting Package Tally and Computing (Quality Multi Training Centre)
+}
+
+% RIGHT COLUMN
+\switchcolumn
+
+\cvsection{Education}
+
+\cvitem{Tribhuvan University}
+  {Master’s in Business Studies}
+  {2023 -- 2025}
+  {Pokhara, Nepal}
+
+\cvitem{Tribhuvan University}
+  {Bachelor of Business Studies}
+  {2016 -- 2020}
+  {Pokhara, Nepal}
+
+\cvsection{Language Skills}
+
+{\small
+\textbf{Nepali (native)}\\
+\textbf{Hindi:} Listening (C2), Spoken Production (C1), Reading (C2), Spoken Interaction (C1), Writing (C1)\\
+\textbf{English:} Listening (B2), Speaking (B1), Reading (B2), Spoken Interaction (B2), Writing (C1)\\
+\textbf{Swedish:} Listening (A2), Spoken Production (A1), Reading (A1), Spoken Interaction (A1)\\
+}
+
+\cvsection{Skills}
+
+{\small
+\textbf{Business and Accounting:} Ledger management, billing, audit preparation, expense tracking\\
+\textbf{Hospitality:} Sushi, barista, food preparation\\
+\textbf{IT:} Document digitization, Tally, Office tools\\
+\textbf{Other:} Customer service, team support, organization\\
+}
+
+\cvsection{Other Details}
+{\small
+Nepali nationality\\
+Residence Permit (Sweden)\\
+Date of Birth: 1999-02-27\\
+Address: Länsmansgården, 418 41 Gothenburg, Sweden\\
+}
+
+\cvsection{References}
+{\small Available on request.}
+
+\end{paracol}
+
+\end{document}
