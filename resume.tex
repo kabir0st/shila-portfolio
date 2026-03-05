@@ -9,97 +9,124 @@
 \renewcommand*\familydefault{\sfdefault}
 
 % --- Layout & graphics ---
-\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage[a4paper,margin=1.2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{paracol}
-\setlength{\columnsep}{0.5cm}
+\setlength{\columnsep}{0.8cm}
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
-\setlength{\parskip}{10pt}
-\setlength{\parindent}{2pt}
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=1pt, parsep=0pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
 
 % --- Colors ---
 \definecolor{accent}{HTML}{1F4B99}
 \definecolor{textgray}{HTML}{222222}
+\definecolor{lightgray}{HTML}{555555}
 \color{textgray}
 
 % --- Headings ---
 \newcommand{\cvsection}[1]{%
-  \vspace{6pt}\textbf{\large\color{accent}#1}\vspace{4pt}\par
+  \vspace{6pt}{\large\bfseries\color{accent}#1}\vspace{2pt}\par
+  \hrule height 0.5pt \color{lightgray}\vspace{6pt}
 }
 
 % --- Subheading workplace/education ---
-\newcommand{\cvitem}[4]{%
-  {\textbf{#1}} \hfill {\small #3}\par
-  {\textit{#2}}, {\small #4}\vspace{10pt}
+\newcommand{\cvexperience}[4]{%
+  \noindent{\textbf{#1}} \hfill {\small\textcolor{accent}{\textbf{#3}}}\par
+  \noindent{\textit{#2}}\par\vspace{2pt}
+  {\small #4}\vspace{8pt}
 }
 
-% --- Horizontal line ---
-\newcommand{\sepline}{\vspace{6pt}\hrule height 0.5pt \vspace{6pt}}
+\newcommand{\cveducation}[4]{%
+  \noindent{\textbf{#1}} \hfill {\small\textcolor{accent}{\textbf{#3}}}\par
+  \noindent{\textit{#2}}, {\small\textcolor{lightgray}{#4}}\vspace{6pt}
+}
 
 \begin{document}
 
 % HEADER
 \noindent
-\begin{minipage}{0.7\textwidth}
+\begin{minipage}[c]{0.75\textwidth}
   {\Huge\bfseries\color{accent} Shila Bhujel}\par
   \vspace{6pt}
-  {\small\color{accent}
-    \faPhone\; +46 700417119 \;|\;
-    \faEnvelope\; sheelabhujel26@gmail.com \;|\;
-    \faAddressCard\; shila.kabir0st.info
+  {\small\color{textgray}
+    \faPhone\; +46 700 417 119 \quad
+    \faEnvelope\; sheelabhujel26@gmail.com \quad
+    \faGlobe\; shila.kabir0st.info
   }
 \end{minipage}%
 \hfill
-\begin{minipage}{0.25\textwidth}
-  % Optionally include photo if available
-  %\raggedleft
-  %\begin{tikzpicture}
+\begin{minipage}[c]{0.20\textwidth}
+  \raggedleft
+  % Uncomment below to include photo
+  % \begin{tikzpicture}
   %  \clip (0,0) circle (1.4cm);
   %  \node at (0,0) {\includegraphics[width=2.8cm]{IMG_2417.jpg}};
-  %\end{tikzpicture}
+  % \end{tikzpicture}
 \end{minipage}
 
-\sepline
+\vspace{8pt}
 
 % PROFILE
+\cvsection{Professional Summary}
 {\small
-Motivated and detail-oriented professional with a strong background in business management, accounting, and hospitality. Skilled in food preparation, barista services, and sushi specialization, with proven ability to maintain high standards of quality and efficiency. Adaptable, hardworking, and eager to contribute skills in both business and hospitality sectors.
+Motivated and detail-oriented professional with a strong background in business management, accounting, and hospitality. Skilled in food preparation, barista services, and sushi specialization, with a proven ability to maintain high standards of quality and efficiency. Adaptable, hardworking, and eager to contribute skills in both business and customer-focused environments.\par
 }
 
-\sepline
+\vspace{6pt}
 
 \begin{paracol}{2}
 
 % LEFT COLUMN
 \cvsection{Work Experience}
 
-\cvitem{Tre Indier, Gothenburg, Sweden}
+\cvexperience{Tre Indier, Gothenburg, Sweden}
   {Waiter/Waitress}
   {Sep 2025 -- Current}
-  {Provided prompt, friendly service by taking and serving orders accurately. Assisted guests with menu selections and addressed special requests professionally. Maintained cleanliness and organization of dining areas while supporting team efficiency. Handled transactions and resolved customer concerns to ensure satisfaction.}
+  {\begin{itemize}
+    \item Provided prompt, friendly service by taking and serving orders accurately.
+    \item Assisted guests with menu selections and addressed special requests professionally.
+    \item Maintained cleanliness and organization of dining areas while supporting team efficiency.
+    \item Handled transactions and resolved customer concerns to ensure satisfaction.
+  \end{itemize}}
 
-\cvitem{Kantipur Hotel Training Center}
+\cvexperience{Kantipur Hotel Training Center}
   {Assistant Kitchen Manager (Intern: Sushi Specialization)}
   {May 2025 -- Aug 2025}
-  {Completed internship in special sushi preparation. Gained hands-on experience in sushi making and kitchen coordination. Maintained food hygiene and safety standards. Assisted in managing daily kitchen operations and food presentation.}
+  {\begin{itemize}
+    \item Completed an internship focused on special sushi preparation and presentation.
+    \item Gained hands-on experience in modern kitchen coordination and food presentation.
+    \item Maintained strict adherence to food hygiene and safety standards.
+    \item Assisted in managing daily kitchen operations to ensure continuous workflow.
+  \end{itemize}}
 
-\cvitem{Siddhartha Lovedale School}
+\cvexperience{Siddhartha Lovedale School}
   {Financial Accountant}
   {Apr 2020 -- Apr 2023}
-  {Managed the school's financial operations, including daily transactions, expense tracking, billing, and ledger posting. Handled audit preparations and digitized financial documents in Nepali and English. Supported client relations and ensured smooth financial operations.}
+  {\begin{itemize}
+    \item Managed the school's financial operations, including daily transactions, expense tracking, and billing.
+    \item Maintained precise ledgers and handled comprehensive audit preparations.
+    \item Digitized financial documents in both Nepali and English to modernize record-keeping.
+    \item Supported positive client-school relations and ensured smooth financial processing.
+  \end{itemize}}
 
-\cvitem{Friends Gifts Shop and Fancy Store}
+\cvexperience{Friends Gifts Shop and Fancy Store}
   {Store Manager}
   {Aug 2018 -- Mar 2020}
-  {Managed front-desk operations and financial activities. Handled transactions, maintained ledgers, supported cash flow management, and ensured accountability and smooth business operations.}
+  {\begin{itemize}
+    \item Directed front-desk operations and handled all core financial activities.
+    \item Maintained accurate ledgers, supported cash flow management, and analyzed daily sales.
+    \item Ensured strict financial accountability and the smooth execution of business operations.
+  \end{itemize}}
 
 \cvsection{Certifications \& Training}
 {\small
-Sushi Specialistic Training (Kantipur Hotel Training Center, 2025)\\
-Certificate of Barista Training Completion (Coffee Demy Barista Training)\\
-Accounting Package Tally and Computing (Quality Multi Training Centre)
+\begin{itemize}
+    \item \textbf{Sushi Specialistic Training}\\ Kantipur Hotel Training Center, 2025
+    \item \textbf{Certificate of Barista Training}\\ Coffee Demy Barista Training
+    \item \textbf{Accounting Package Tally and Computing}\\ Quality Multi Training Centre
+\end{itemize}
 }
 
 % RIGHT COLUMN
@@ -107,40 +134,46 @@ Accounting Package Tally and Computing (Quality Multi Training Centre)
 
 \cvsection{Education}
 
-\cvitem{Tribhuvan University}
+\cveducation{Tribhuvan University}
   {Master’s in Business Studies}
   {2023 -- 2025}
   {Pokhara, Nepal}
 
-\cvitem{Tribhuvan University}
+\cveducation{Tribhuvan University}
   {Bachelor of Business Studies}
   {2016 -- 2020}
   {Pokhara, Nepal}
 
-\cvsection{Language Skills}
-
-{\small
-\textbf{Nepali (native)}\\
-\textbf{Hindi:} Listening (C2), Spoken Production (C1), Reading (C2), Spoken Interaction (C1), Writing (C1)\\
-\textbf{English:} Listening (B2), Speaking (B1), Reading (B2), Spoken Interaction (B2), Writing (C1)\\
-\textbf{Swedish:} Listening (A2), Spoken Production (A1), Reading (A1), Spoken Interaction (A1)\\
-}
-
 \cvsection{Skills}
 
 {\small
-\textbf{Business and Accounting:} Ledger management, billing, audit preparation, expense tracking\\
-\textbf{Hospitality:} Sushi, barista, food preparation\\
-\textbf{IT:} Document digitization, Tally, Office tools\\
-\textbf{Other:} Customer service, team support, organization\\
+\textbf{Business \& Accounting:}\\
+Ledger management, billing, audit preparation, expense tracking, financial reporting\\[3pt]
+\textbf{Hospitality:}\\
+Sushi preparation, barista services, food safety \& hygiene, customer service\\[3pt]
+\textbf{IT \& Software:}\\
+Tally ERP, MS Office Suite, Document digitization\\[3pt]
+\textbf{Core Competencies:}\\
+Team collaboration, organizational skills, adaptability, problem solving
+}
+
+\cvsection{Language Skills}
+
+{\small
+\textbf{Nepali:} Native\\[2pt]
+\textbf{Hindi:} Fluent (C1/C2)\\[2pt]
+\textbf{English:} Professional (B2/C1)\\[2pt]
+\textbf{Swedish:} Basic (A1/A2)
 }
 
 \cvsection{Other Details}
 {\small
-Nepali nationality\\
-Residence Permit (Sweden)\\
-Date of Birth: 1999-02-27\\
-Address: Länsmansgården, 418 41 Gothenburg, Sweden\\
+\begin{itemize}[label=\textcolor{accent}{\textbullet}]
+    \item \textbf{Nationality:} Nepali
+    \item \textbf{Permit:} Residence Permit (Sweden)
+    \item \textbf{DOB:} 1999-02-27
+    \item \textbf{Address:}\\ Länsmansgården, 418 41 Gothenburg, Sweden
+\end{itemize}
 }
 
 \cvsection{References}

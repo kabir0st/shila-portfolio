@@ -3,7 +3,19 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Award, Utensils, Languages } from "lucide-react";
 
 const About = () => {
-  const experiences = [
+const experiences = [
+    {
+      title: "Waiter/Waitress",
+      restaurant: "Tre Indier",
+      location: "Gothenburg, Sweden",
+      period: "Sep 2025 - Current",
+      achievements: [
+        "Provided prompt, friendly service by taking and serving orders accurately",
+        "Assisted guests with menu selections and addressed special requests professionally",
+        "Maintained cleanliness and organization of dining areas while supporting team efficiency",
+        "Handled transactions and resolved customer concerns to ensure satisfaction"
+      ]
+    },
     {
       title: "Assistant Kitchen Manager",
       restaurant: "Kantipur Hotel Training Center",
